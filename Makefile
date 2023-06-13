@@ -6,7 +6,7 @@
 #    By: grinella <grinella@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/19 11:28:20 by grinella          #+#    #+#              #
-#    Updated: 2023/05/19 13:57:28 by grinella         ###   ########.fr        #
+#    Updated: 2023/06/13 16:47:59 by grinella         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,9 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror -I./incl/push_swap.h
 
 SRC =\
-	prgm/main.c \
+	src/main.c \
 	src/algo.c \
+	src/ft_atol.c \
 	src/ft_lstpop.c \
 	src/ft_stack_new.c \
 	src/moves.c \

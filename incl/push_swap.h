@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:37:51 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/07 15:46:01 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/13 16:49:12 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,6 @@ t_stack	**rr_(t_stack **stack, char c);
 void	rrr(t_stack **stack_a, t_stack **stack_b);
 void	three_nmbrs(t_stack *stack);
 t_stack	*ft_stack_new(int value);
+int		ft_atol(char *str);
+
 #endif
