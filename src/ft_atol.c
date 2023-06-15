@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/13 16:44:04 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/13 16:48:20 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/15 15:02:53 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,6 @@ int	ft_atol(char *str)
 		exit(0);
 	return ((int)(res * sign));
 }
+
+// || (str[i] >= 32 && str[i] <= 47)
+// 		|| (str[i] >= 58 && str[i] <= 126))

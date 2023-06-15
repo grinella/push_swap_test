@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:18:30 by grinella          #+#    #+#             */
-/*   Updated: 2023/05/22 15:02:09 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/14 16:05:35 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,24 +45,6 @@ t_stack	*get_last_node(t_stack *stack)
 		stack = stack->next;
 	}
 	return (stack);
-}
-
-void	print_stack(t_stack *stack)
-{
-	t_stack	*tmp;
-
-	tmp = stack;
-	if (stack != NULL)
-	{
-		while (tmp->next != stack)
-		{
-			ft_putnbr_fd(tmp->value, 1);
-			ft_putchar_fd('\n', 1);
-			tmp = tmp->next;
-		}
-		ft_putnbr_fd(tmp->value, 1);
-		ft_putchar_fd('\n', 1);
-	}
 }
 
 t_stack	*create_node(int value)

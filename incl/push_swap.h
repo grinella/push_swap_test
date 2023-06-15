@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:37:51 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/13 16:49:12 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/15 14:58:19 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
+// # include <string.h>
 
 typedef struct s_stack
 {
@@ -43,5 +44,6 @@ void	rrr(t_stack **stack_a, t_stack **stack_b);
 void	three_nmbrs(t_stack *stack);
 t_stack	*ft_stack_new(int value);
 int		ft_atol(char *str);
+char	**ft_split(char const *s, char c);
 
 #endif

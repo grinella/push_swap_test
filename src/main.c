@@ -6,13 +6,11 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:46:41 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/13 16:50:55 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/15 15:02:59 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 int	main(int ac, char **av)
 {
@@ -25,12 +23,10 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	while (av[++i])
 		new_element(&stack_a, ft_atol(av[i]));
-	printf ("stack a\n");
+	// print_stack(stack_a);
 	print_number(stack_a);
-	printf ("stack b\n");
-	print_number(stack_b);
 	(void) ac;
-	(void) av;
+	// (void) av;
 	return (0);
 }
 
@@ -51,4 +47,5 @@ void	print_number(t_stack *stack)
 		stack = stack->next;
 	}
 	printf("%d\n", stack->value);
+	printf ("_ _\na b\n\n");
 }
