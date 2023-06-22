@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:02:59 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/14 14:42:31 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/22 19:24:14 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ void	p_(t_stack **stack_from, t_stack **stack_to, char c)
 		write(1, "pb\n", 3);
 }
 
-t_stack	*s_(t_stack *stack, char c)
+void s_(t_stack **stack, char c)
 {
 	t_stack	*tmp;
 	int		n;
 
-	tmp = stack;
+	tmp = *stack;
 	n = tmp->value;
 	tmp->value = tmp->next->value;
 	tmp->next->value = n;
@@ -43,12 +43,11 @@ t_stack	*s_(t_stack *stack, char c)
 		write (1, "sa\n", 3);
 	else if (c == 'b')
 		write (1, "sb\n", 3);
-	return (tmp);
 }
 
 void	ss(t_stack **stack_a, t_stack **stack_b)
 {
-	*stack_a = s_(*stack_a, 0);
-	*stack_b = s_(*stack_b, 0);
+	s_(stack_a, 0);
+	s_(stack_b, 0);
 	ft_putstr_fd("ss\n", 1);
 }

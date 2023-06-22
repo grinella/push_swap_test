@@ -1,40 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*   errors.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/13 16:44:04 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/16 16:37:01 by grinella         ###   ########.fr       */
+/*   Created: 2023/06/19 16:04:55 by grinella          #+#    #+#             */
+/*   Updated: 2023/06/22 15:11:22 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
-int	ft_atol(char *str)
+void	free_stack(t_stack **stack)
 {
-	long			res;
-	long			sign;
-	unsigned int	i;
+	t_stack	*stack2;
+	t_stack	*last;
+	t_stack	*tmp;
 
-	res = 0;
-	sign = 1;
-	i = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	stack2 = *stack;
+	last = get_last_node(*stack);
+	while (stack2 != last)
 	{
-		if (str[i] == '-')
-			sign = -1;
-		i++;
+		tmp = stack2->next;
+		free(stack2);
+		stack2 = tmp;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-		res = res * 10 + str[i++] - '0';
-	if (res * sign > 2147483647 || res * sign < -2147483648)
-	{
-		write(1, "Error\n", 6);
-		exit(0);
-	}
-	return ((int)(res * sign));
+	free(last);
+}
+
+void	err_rip(t_stack **stack_a)
+{
+	free_stack(stack_a);
+	write(2, "Error\n", 7);
+	free(stack_a);
 }

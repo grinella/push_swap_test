@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:18:30 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/14 16:05:35 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/19 15:15:25 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	new_element(t_stack **stack, int value)
 	t_stack	*new_node;
 	t_stack	*last_node;
 
-	new_node = ft_stack_new(value);
+	new_node = create_node(value);
 	if (new_node == NULL)
 		return ;
 	if (*stack == NULL)
@@ -51,7 +51,7 @@ t_stack	*create_node(int value)
 {
 	t_stack	*new_node;
 
-	new_node = (t_stack *)malloc(sizeof(t_stack));
+	new_node = malloc(sizeof(t_stack));
 	if (new_node == NULL)
 		return (NULL);
 	new_node->value = value;
