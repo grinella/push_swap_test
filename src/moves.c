@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:02:59 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/22 19:24:14 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/23 12:37:07 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	p_(t_stack **stack_from, t_stack **stack_to, char c)
 		write(1, "pb\n", 3);
 }
 
-void s_(t_stack **stack, char c)
+void	s_(t_stack **stack, char c)
 {
 	t_stack	*tmp;
 	int		n;

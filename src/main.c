@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:46:41 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/22 19:16:10 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/23 12:36:59 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,9 @@ int	main(int ac, char **av)
 
 	stack_a = malloc(sizeof(t_stack));
 	stack_a = NULL;
-	printf("AOOO\n");
 	print_stack(&stack_a);
 	check(ac, av);
-	trans_av(av,&stack_a);
+	trans_av(av, &stack_a);
 	stack_b = malloc(sizeof(t_stack));
 	stack_b = NULL;
 	tre_numeri(&stack_a);
