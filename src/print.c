@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 16:05:11 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/22 19:07:22 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/26 14:37:35 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,8 @@ void	print_stack(t_stack **stack)
 	tmp = *stack;
 	if (*stack != NULL)
 	{
-		printf("A2\n");
 		while (tmp->next != *stack)
 		{
-			printf("A3\n");
 			ft_putnbr_fd(tmp->value, 1);
 			ft_putchar_fd('\n', 1);
 			tmp = tmp->next;

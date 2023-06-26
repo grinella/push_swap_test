@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:37:51 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/22 19:23:33 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/26 14:33:38 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,37 +25,37 @@ typedef struct s_stack
 	struct s_stack	*next;
 }	t_stack;
 
-void	print_number(t_stack **stack);
-void	new_element(t_stack **stack, int value);
-t_stack	*create_node(int value);
-t_stack	*ft_lstpop(t_stack **stack);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(char *s, int fd);
-size_t	ft_strlen(const char *str);
-void	print_stack(t_stack **stack);
-t_stack	*get_last_node(t_stack *stack);
-void	p_(t_stack **stack_from, t_stack **stack_to, char c);
-void	s_(t_stack **stack, char c);
-void	ss(t_stack **stack_a, t_stack **stack_b);
-t_stack	*r_(t_stack **stack, char c);
-void	rr(t_stack **stack_a, t_stack **stack_b);
-t_stack	**rr_(t_stack **stack, char c);
-void	rrr(t_stack **stack_a, t_stack **stack_b);
-// void	three_nmbrs(t_stack *stack);
-t_stack	*ft_stack_new(int value);
-int		ft_atol(char *str);
-char	**ft_split(char const *s, char c);
-void	free_mat(char **mat);
-void	trans_row(char *s, t_stack **stack_a);
-void	trans_av(char **av, t_stack **stack_a);
-void	err_rip(t_stack **stack_a);
-void	free_stack(t_stack **stack);
-void	free_mat(char **mat);
-void	free_total_a(t_stack **stack_a);
-void	free_total_b(t_stack **stack_b);
-int		check_mat(char **av);
-void	check(int ac, char **av);
-void	tre_numeri(t_stack **stack);
+void		print_number(t_stack **stack);
+void		new_element(t_stack **stack, int value);
+t_stack		*create_node(int value);
+t_stack		*ft_lstpop(t_stack **stack);
+void		ft_putchar_fd(char c, int fd);
+void		ft_putnbr_fd(int n, int fd);
+void		ft_putstr_fd(char *s, int fd);
+size_t		ft_strlen(const char *str);
+void		print_stack(t_stack **stack);
+t_stack		*get_last_node(t_stack *stack);
+void		p_(t_stack **stack_from, t_stack **stack_to, char c);
+void		s_(t_stack **stack, char c);
+void		ss(t_stack **stack_a, t_stack **stack_b);
+t_stack		*r_(t_stack **stack, char c);
+void		rr(t_stack **stack_a, t_stack **stack_b);
+t_stack		**rr_(t_stack **stack, char c);
+void		rrr(t_stack **stack_a, t_stack **stack_b);
+t_stack		*ft_stack_new(int value);
+int			ft_atol(char *str);
+char		**ft_split(char const *s, char c);
+void		free_mat(char **mat);
+void		trans_row(char *s, t_stack **stack_a);
+void		trans_av(char **av, t_stack **stack_a);
+void		err_rip(t_stack **stack_a);
+void		free_stack(t_stack **stack);
+void		free_mat(char **mat);
+void		free_total_a(t_stack **stack_a);
+void		free_total_b(t_stack **stack_b);
+// static int	check_ripetuti(int num, t_stack **stack_a);
+int			check_mat(char **av);
+void		check(int ac, char **av);
+void		tre_numeri(t_stack **stack);
 
 #endif
