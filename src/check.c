@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 16:25:34 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/26 14:33:31 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/30 18:15:29 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,20 @@ void	check(int ac, char **av)
 		}
 		free_mat(mat);
 	}	
+}
+
+int	check_order(t_stack **stack)
+{
+	t_stack	*tmp;
+
+	tmp = *stack;
+	while (tmp->next != *stack && tmp->value < tmp->next->value)
+	{
+		tmp = tmp->next;
+		if (tmp->next == *stack)
+		{
+			return (1);
+		}
+	}
+	return (0);
 }

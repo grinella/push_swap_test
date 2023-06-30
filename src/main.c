@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:46:41 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/26 14:52:00 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/30 18:56:01 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ int	main(int ac, char **av)
 	trans_av(av, &stack_a);
 	stack_b = malloc(sizeof(t_stack));
 	stack_b = NULL;
+	ftn(&stack_a);
 	tre_numeri(&stack_a);
-	//print_number(&stack_a);
+	check_order(&stack_a);
+	print_number(&stack_a);
 	free_total_a(&stack_a);
 	free_total_b(&stack_b);
 	(void) ac;
@@ -48,5 +50,5 @@ void	print_number(t_stack **stack)
 		printf("%d ", (*stack)->value);
 		*stack = (*stack)->next;
 	}
-	printf("%d ", (*stack)->value);
+	printf("%d", (*stack)->value);
 }

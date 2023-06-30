@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:37:51 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/26 14:33:38 by grinella         ###   ########.fr       */
+/*   Updated: 2023/06/30 18:53:46 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,7 @@ void		free_total_b(t_stack **stack_b);
 int			check_mat(char **av);
 void		check(int ac, char **av);
 void		tre_numeri(t_stack **stack);
+int			check_order(t_stack **stack);
+int			ftn(t_stack **stack);
 
 #endif
