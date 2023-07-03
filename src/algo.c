@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:15:07 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/30 18:56:07 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/03 15:36:45 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ void	tre_numeri(t_stack **stack)
 //find tot num:
 int	ftn(t_stack **stack)
 {
-	check_order(&stack_a);
 	t_stack	*tmp;
 	int		i;
 
@@ -56,5 +55,42 @@ int	ftn(t_stack **stack)
 
 void	five_h(t_stack **stack_x, t_stack **stack_y)
 {
-	ftn(stack_a)
+	int	i;
+	int	t;
+
+	i = (ftn(stack_x) - 3);
+	t = 0;
+	// printf ("%d\n", ftn(stack_x) - 3);
+	while (t != i)
+	{
+		printf("AAA\n");
+		p_(stack_x, stack_y, 1);
+		t++;
+	}
+	printf("AAB\n");
+	tre_numeri(stack_x);
+	while (*stack_y)
+	{
+		if (*stack_x < *stack_y)
+			r_(stack_x, 1);
+		if (*stack_x > *stack_y)
+			p_(stack_y, stack_x, 2);
+/*
+// qui serve trovare il numero piú piccolo per poi portarlo in cima
+// in base alla sua posizione si faranno x(ra o rra):
+// esempio
+// ftn(stack_x) = 12 e find_pos_min(stack_x) = 4
+// soluzione
+// visto che find_pos_min é meno della metá rispetto a 
+// ftn allora faccio
+// (find_pos_min - 1) volte "ra"
+
+// esempio2
+// ftn(stack_x) = 16 e find_pos_min(stack_x) = 12
+// soluzione
+// 12 > 8(metá di 16), quindi faró:
+// (ftn - find_pos_min + 1) volte "rra"
+*/
+	}
+	return ;
 }
