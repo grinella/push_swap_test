@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:02:59 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/26 15:02:19 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/04 17:21:59 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ void	p_(t_stack **stack_from, t_stack **stack_to, char c)
 	tmp = *stack_from;
 	get_last_node(*stack_from)->next = (*stack_from)->next;
 	*stack_from = tmp->next;
+	// printf("PUSH\n");
 	get_last_node(*stack_to)->next = tmp;
 	tmp->next = *stack_to;
 	*stack_to = tmp;

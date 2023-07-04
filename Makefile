@@ -6,7 +6,7 @@
 #    By: grinella <grinella@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/05/19 11:28:20 by grinella          #+#    #+#              #
-#    Updated: 2023/06/30 18:32:06 by grinella         ###   ########.fr        #
+#    Updated: 2023/07/04 17:02:58 by grinella         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRC =\
 	src/ft_stack_new.c \
 	src/moves.c \
 	src/rotate.c \
-	src/utils.c \
+	src/node.c \
 	src/ft_putnbr_fd.c \
 	src/ft_putchar_fd.c \
 	src/ft_putstr_fd.c\
@@ -34,6 +34,7 @@ SRC =\
 	src/errors.c\
 	src/free.c\
 	src/check.c\
+	src/find.c\
 
 OBJ = $(SRC:.c=.o)
 

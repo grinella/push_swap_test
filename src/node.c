@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   node.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:18:30 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/19 15:15:25 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/04 17:19:50 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,13 @@ t_stack	*get_last_node(t_stack *stack)
 {
 	t_stack	*first_node;
 
+	// printf("GLS\n");
 	first_node = stack;
 	if (stack == NULL)
 		return (NULL);
 	while (stack->next != first_node)
 	{
+		// printf("GLS1\n");
 		stack = stack->next;
 	}
 	return (stack);
