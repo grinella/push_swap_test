@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/14 16:05:11 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/26 14:37:35 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/05 16:11:03 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ void	print_stack(t_stack **stack)
 		while (tmp->next != *stack)
 		{
 			ft_putnbr_fd(tmp->value, 1);
-			ft_putchar_fd('\n', 1);
+			// ft_putchar_fd('\n', 1);
+			write(1, ", ", 2);
 			tmp = tmp->next;
 		}
 		ft_putnbr_fd(tmp->value, 1);
@@ -30,15 +31,19 @@ void	print_stack(t_stack **stack)
 	}
 }
 
-// void	print_stack(t_stack *stack)
+// void	print_stack(t_stack **stack)
 // {
-// 	t_stack	*current;
+// 	t_stack	*temp;
+// 	int		i;
 
-// 	current = stack;
-// 	while (current != NULL)
+// 	temp = *stack;
+// 	i = 0;
+// 	ftn(stack) = ft_len_stack(stack);
+// 	write(1, "\n-------------\n      A      \n-------------\n", 43);
+// 	while (i < stack->size && temp != NULL)
 // 	{
-// 		printf("%d ", current->value);
-// 		current = current->next;
+// 		ft_printf("      %d\n", temp->value);
+// 		temp = temp->next;
+// 		i++;
 // 	}
-// 	printf("\n");
 // }

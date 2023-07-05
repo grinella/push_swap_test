@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:18:30 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/04 17:19:50 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/05 16:32:51 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,19 +33,38 @@ void	new_element(t_stack **stack, int value)
 	}
 }
 
+// t_stack	*get_last_node(t_stack *stack)
+// {
+// 	t_stack	*first_node;
+
+// 	first_node = stack;
+// 	if (stack == NULL)
+// 		return (NULL);
+// 	while (stack->next != first_node)
+// 		stack = stack->next;
+// 	if (stack->next != first_node)
+// 	{
+// 		// La lista non è circolare
+// 		// Gestisci l'errore o restituisci NULL
+// 		return (NULL);
+// 	}
+// 	return (stack);
+// }
+
 t_stack	*get_last_node(t_stack *stack)
 {
 	t_stack	*first_node;
-
-	// printf("GLS\n");
+	printf("check value : %d", stack->value);
 	first_node = stack;
 	if (stack == NULL)
 		return (NULL);
+	printf("GLS\n");
 	while (stack->next != first_node)
 	{
-		// printf("GLS1\n");
+		printf("Values: %d\n", stack->value);
 		stack = stack->next;
 	}
+	printf("Values: %d\n", stack->value);
 	return (stack);
 }
 

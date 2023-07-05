@@ -6,11 +6,36 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:46:41 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/04 17:33:36 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/05 16:26:26 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
+
+int	is_circular_list(t_stack *head)
+{
+	t_stack	*tortoise;
+	t_stack	*hare;
+
+	tortoise = head;
+	hare = head->next;
+	if (head == NULL)
+	{
+		printf("head == NULL\n");
+		return (0);
+	}
+	while (hare != NULL && hare->next != NULL)
+	{
+		if (tortoise == hare)
+		{
+			printf("tortoise == hare\n");
+			return (1);
+		}
+		tortoise = tortoise->next;
+		hare = hare->next->next;
+	}
+	return (0);
+}
 
 int	main(int ac, char **av)
 {
@@ -19,15 +44,26 @@ int	main(int ac, char **av)
 
 	stack_a = malloc(sizeof(t_stack));
 	stack_a = NULL;
-	print_stack(&stack_a);
 	check(ac, av);
 	trans_av(av, &stack_a);
 	stack_b = malloc(sizeof(t_stack));
 	stack_b = NULL;
+	is_circular_list(stack_a);
+	print_stack(&stack_a);
+	// p_(&stack_a, &stack_b, 2);
+	// p_(&stack_b, &stack_a, 1);
 	// tre_numeri(&stack_a);
 	five_h(&stack_a, &stack_b);
-	check_order(&stack_a);
-	print_number(&stack_a);
+	// if (check_order(&stack_a) == 1)
+	// {
+		
+	// }
+	printf("stack a:\n");
+	print_stack(&stack_a);
+	printf("stack b:\n");
+	print_stack(&stack_b);
+	// print_number(&stack_a);
+	// print_number(&stack_b);
 	free_total_a(&stack_a);
 	free_total_b(&stack_b);
 	return (0);
@@ -49,5 +85,5 @@ void	print_number(t_stack **stack)
 		printf("%d ", (*stack)->value);
 		*stack = (*stack)->next;
 	}
-	printf("%d", (*stack)->value);
+	printf("%d\n", (*stack)->value);
 }

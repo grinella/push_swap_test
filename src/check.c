@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 16:25:34 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/04 17:22:19 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/05 15:59:53 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,3 +67,5 @@ int	check_order(t_stack **stack)
 	}
 	return (0);
 }
+
+// && tmp->next->value > *stack)
