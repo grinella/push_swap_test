@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 15:06:22 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/04 16:54:27 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/06 17:05:54 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,21 +82,28 @@ int	find_succ(t_stack **stack_b, t_stack **stack_a)
 	tmp = *stack_a;
 	b = *stack_b;
 	i = 1;
+	printf("find_succ\n");
 	while (tmp->value != find_min(stack_a))
 	{
+		printf("tmp->value != find_min(stack_a)\n");
 		tmp = tmp->next;
 		i++;
 	}
-	while (i < ftn(stack_a))
-	{
-		if (i >= ftn(stack_a))
-			i = 0;
-		while (tmp->value > b->value)
-		{	
+	while (tmp->value > b->value)
+	{	
+		printf("tmp->value > b->value\n");
+		while (i < ftn(stack_a))
+		{
+			printf("i < ftn = %d < %d \n", i, ftn(stack_a));
 			tmp = tmp->next;
 			i++;
+			printf("i = %d\n", i);
+			// sleep(300);
+			if (i >= ftn(stack_a))
+				i = 0;
 		}
 		// printf ("successivo %d\n", tmp->value);
 	}
+	printf("successivo = %d\n", i);
 	return (i);
 }

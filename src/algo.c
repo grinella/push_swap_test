@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:15:07 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/05 13:21:17 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/06 16:46:39 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,19 +46,24 @@ void	five_h(t_stack **stack_x, t_stack **stack_y)
 
 	i = (ftn(stack_x));
 	t = 3;
-	// printf ("%d\n", (ftn(stack_x) - 3));
+	printf ("tot -3 = %d\n", (ftn(stack_x) - 3));
 	while (t < i)
 	{
 		p_(stack_x, stack_y, 2);
 		t++;
 	}
+	printf("pre tre numeri\n");
 	tre_numeri(stack_x);
+	printf("post tre numeri\n");
 	while (*stack_y)
 	{
+		printf("*stack_y value = %d\n", (*stack_y)->value);
 		if (*stack_x < *stack_y)
 			r_(stack_x, 1);
 		while (*stack_x > *stack_y)
 		{
+			printf("testa stack_x > testa stack_y %d > %d\n", (*stack_x)->value,
+				(*stack_y)->value);
 			if ((find_succ(stack_y, stack_x) > (ftn(stack_x)) / 2))
 			{
 				j = (ftn(stack_x) - find_succ(stack_y, stack_x) + 1);

@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:18:30 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/05 16:32:51 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/06 16:18:44 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,8 @@ void	new_element(t_stack **stack, int value)
 t_stack	*get_last_node(t_stack *stack)
 {
 	t_stack	*first_node;
-	printf("check value : %d", stack->value);
+
+	printf("check value : %d\n", stack->value);
 	first_node = stack;
 	if (stack == NULL)
 		return (NULL);
