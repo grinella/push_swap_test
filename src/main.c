@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:46:41 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/05 16:26:26 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/07 18:26:24 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int	is_circular_list(t_stack *head)
 		tortoise = tortoise->next;
 		hare = hare->next->next;
 	}
+	sleep(2);
 	return (0);
 }
 
@@ -50,22 +51,16 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	is_circular_list(stack_a);
 	print_stack(&stack_a);
-	// p_(&stack_a, &stack_b, 2);
-	// p_(&stack_b, &stack_a, 1);
-	// tre_numeri(&stack_a);
 	five_h(&stack_a, &stack_b);
-	// if (check_order(&stack_a) == 1)
-	// {
-		
-	// }
-	printf("stack a:\n");
-	print_stack(&stack_a);
-	printf("stack b:\n");
-	print_stack(&stack_b);
-	// print_number(&stack_a);
-	// print_number(&stack_b);
-	free_total_a(&stack_a);
-	free_total_b(&stack_b);
+	if (check_order(&stack_a) == 1)
+	{
+		printf("stack a:\n");
+		print_stack(&stack_a);
+		printf("stack b:\n");
+		print_stack(&stack_b);
+		free_total_a(&stack_a);
+		free_total_b(&stack_b);
+	}
 	return (0);
 }
 

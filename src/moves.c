@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:02:59 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/05 16:34:36 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/07 20:42:40 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@
 // 		write(1, "pb\n", 3);
 // }
 
+// Da RIVEDERE, PROBLEMI CON I NODI 
 void	p_(t_stack **stack_from, t_stack **stack_to, char c)
 {
 	t_stack	*tmp;

@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:18:30 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/06 16:18:44 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/07 18:50:21 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,12 @@ t_stack	*get_last_node(t_stack *stack)
 	printf("GLS\n");
 	while (stack->next != first_node)
 	{
-		printf("Values: %d\n", stack->value);
+		printf("values: %d\n", stack->value);
+		sleep(1);
 		stack = stack->next;
 	}
-	printf("Values: %d\n", stack->value);
+	printf("Last node: %d\n", stack->value);
+	sleep(1);
 	return (stack);
 }
 

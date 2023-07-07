@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:37:51 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/05 15:59:26 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/07 17:56:46 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int			check_order(t_stack **stack);
 int			ftn(t_stack **stack);
 int			find_pos_min(t_stack **stack);
 int			find_min(t_stack **stack);
-int			find_succ(t_stack **stack_b, t_stack **stack_a);
+int			find_pos_succ(t_stack **stack_b, t_stack **stack_a);
 void		five_h(t_stack **stack_x, t_stack **stack_y);
 
 #endif
