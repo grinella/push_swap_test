@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:46:41 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/07 18:26:24 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/13 17:10:48 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,12 @@ int	main(int ac, char **av)
 	stack_b = NULL;
 	is_circular_list(stack_a);
 	print_stack(&stack_a);
-	five_h(&stack_a, &stack_b);
+	// five_h(&stack_a, &stack_b);
+	p_(&stack_a, &stack_b, 2);
+	printf("stack a:\n");
+	print_stack(&stack_a);
+	printf("stack b:\n");
+	print_stack(&stack_b);
 	if (check_order(&stack_a) == 1)
 	{
 		printf("stack a:\n");

@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:15:07 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/07 20:39:51 by grinella         ###   ########.fr       */
+/*   Updated: 2023/07/13 16:32:23 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,10 @@ void	five_h(t_stack **stack_x, t_stack **stack_y)
 	i = (ftn(stack_x));
 	printf ("tot -3 = %d\n", (ftn(stack_x) - 3));
 	while (i-- > 3)
+	{
+		printf("while i-- > 3\n");
 		p_(stack_x, stack_y, 2);
+	}
 	printf("pre tre numeri\n");
 	sleep(1);
 	tre_numeri(stack_x);
@@ -55,14 +58,15 @@ void	five_h(t_stack **stack_x, t_stack **stack_y)
 	print_stack(stack_x);
 	printf("stack b:\n");
 	print_stack(stack_y);
+	printf("\n");
 	while (*stack_y)
 	{
 		fnl_h = *stack_x;
-		if ((find_pos_succ(stack_x, stack_y) > (ftn(stack_x)) / 2 && (ftn(stack_x)) % 2) > 0)
+		if ((find_pos_succ(stack_x, stack_y) > (ftn(stack_x))
+				/ 2 && (ftn(stack_x)) % 2) > 0)
 		{
 			k = (ftn(stack_x) - find_pos_succ(stack_x, stack_y) + 1);
 			printf("find_pos_succ(stack_x, stack_y) > (ftn(stack_x)) / 2\n");
-			printf("cacca\n");
 			printf("k = %d\n", k);
 			sleep(1);
 			while (k-- != 0)
