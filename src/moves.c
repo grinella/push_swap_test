@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 15:02:59 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/13 17:14:29 by grinella         ###   ########.fr       */
+/*   Updated: 2023/09/15 12:25:37 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@
 // 		write (1, "pb\n", 3);
 // }
 
-// UNA VOLTA CHE LO STACK DA CUI PUSHO RIMANE VUOTO COPIA TUTTI GLI GLI ELEMENTI DELLO STACK IN CUI HO PUSHATO
+// GLI ELEMENTI DELLE STACK SI INVERTONO?!
 void	p_(t_stack **stack_from, t_stack **stack_to, char c)
 {
 	t_stack	*tmp_f;
@@ -101,6 +101,15 @@ void	p_(t_stack **stack_from, t_stack **stack_to, char c)
 		return ;
 	if (*stack_to)
 	{
+		if (ftn(stack_from) == 1)
+		{
+			tmp_f = *stack_from;
+			tmp_t = *stack_to;
+			tmp_f->next = *stack_to;
+			get_last_node(*stack_to)->next = tmp_f;
+			*stack_to = tmp_f;
+			// *stack_from = NULL;
+		}
 		tmp_f = *stack_from;
 		tmp_t = *stack_to;
 		tmp = (*stack_from)->next;

@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 16:37:51 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/07 17:56:46 by grinella         ###   ########.fr       */
+/*   Updated: 2023/09/15 13:43:17 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,15 @@
 # include <stdio.h>
 // # include <string.h>
 
+typedef struct s_push_swap
+{
+	t_stack		*stack_a;
+	t_stack		*stack_b;
+}	t_push_swap;
+
 typedef struct s_stack
 {
+	t_list			*content;
 	int				value;
 	struct s_stack	*next;
 }	t_stack;

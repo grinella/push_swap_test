@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/04 15:06:22 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/07 20:15:35 by grinella         ###   ########.fr       */
+/*   Updated: 2023/09/07 12:50:58 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ int	find_pos_succ(t_stack **stack_a, t_stack **stack_b)
 			if (t == ftn(stack_a))
 				t = 0;
 			t++;
-		}	
+		}
 		if (tmp->value > b->value)
 		{
 			printf("successivo = %d\n", i);

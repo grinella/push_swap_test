@@ -6,7 +6,7 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/22 16:25:34 by grinella          #+#    #+#             */
-/*   Updated: 2023/07/07 18:25:49 by grinella         ###   ########.fr       */
+/*   Updated: 2023/09/07 12:40:19 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	check_mat(char **av)
 			if (av[i][j] < '0' || av[i][j] > '9')
 				return (1);
 		}
-	}	
+	}
 	return (0);
 }
 
@@ -49,7 +49,7 @@ void	check(int ac, char **av)
 			exit (1);
 		}
 		free_mat(mat);
-	}	
+	}
 	printf("Check... \n");
 	sleep(2);
 }

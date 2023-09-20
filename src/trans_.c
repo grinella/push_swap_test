@@ -6,14 +6,14 @@
 /*   By: grinella <grinella@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 14:50:25 by grinella          #+#    #+#             */
-/*   Updated: 2023/06/26 14:33:34 by grinella         ###   ########.fr       */
+/*   Updated: 2023/09/07 13:04:26 by grinella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/push_swap.h"
 
 static int	check_ripetuti(int num, t_stack **stack_a)
-{	
+{
 	t_stack	*tmp;
 
 	if (!*stack_a)
@@ -23,7 +23,7 @@ static int	check_ripetuti(int num, t_stack **stack_a)
 	{
 		if (num == tmp->value)
 			return (1);
-			tmp = tmp->next;
+		tmp = tmp->next;
 	}
 	if (num == tmp->value)
 		return (1);
